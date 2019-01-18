@@ -170,8 +170,10 @@ export default class TopPanelOptions extends Vue {
 
     private goBack() {        
         this.currentStep--;
-        if(this.currentStep == 1)
+        
+        if(this.currentStep == 1) {
             this.isShowOptions = true;
+        }
     }
 
     private randomSetup(fleet: FleetModel) {

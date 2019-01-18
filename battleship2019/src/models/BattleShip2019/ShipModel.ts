@@ -15,7 +15,7 @@ export class ShipModel {
     public getLength(): number {
         return this.length;
     }
-
+    
     public populateHorzHits(start: number): void {
         for (var i = 0; i < this.length; i++, start++) {
             this.hitPoints[i] = start;
