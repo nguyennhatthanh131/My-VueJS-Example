@@ -23,7 +23,8 @@ export default class BottomPanelConsole extends Vue {
     @Prop() private consoleText!: string;
 
     created() {
-        eventBus.$on('choosePlayerMode', (mode: string) => this.setPlayerMode(mode));        
+        eventBus.$on('choosePlayerMode', (mode: string) => this.setPlayerMode(mode));    
+        eventBus.$on('lost', (userName: string) => this.lost(userName));         
     }
     
     beforeDestroy() {
